@@ -10,7 +10,7 @@ function App() {
   const [bio, setBio] = useState(null);
   const [currentPage, setCurrentPage] = useState('home')
   useEffect(() => {
-    console.log('hi')
+    
     async function startFetching() {
       setBio(null);
       const result = await fetch(usersFetch);

@@ -1,7 +1,6 @@
 function Navbar({onClick1}){
-    function handleNavLinkClick(x){
-        // Вызываем функцию из родительского компонента и передаем ей новое значение currentPage
-        onClick1(x); // Замените 'newPage' на то значение, которое вы хотите установить
+    function handleNavLinkClick(pageHome){
+        onClick1(pageHome); 
       };
     
     return(
