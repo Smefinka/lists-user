@@ -1,7 +1,6 @@
-function Navbar({onClick1}){
-    function handleNavLinkClick(pageHome){
-        onClick1(pageHome); 
-      };
+import { NavLink } from "react-router-dom";
+function Navbar(){
+   
     
     return(
         <>
@@ -10,11 +9,15 @@ function Navbar({onClick1}){
     <div className="collapse navbar-collapse" id="navbarNav">
       <ul className="navbar-nav">
         <li className="nav-item">
-          <a className="nav-link" href="#home" onClick={() => handleNavLinkClick('home')}>List users</a>
+          <NavLink className="nav-link" to="/" >List users</NavLink>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#add-contact" onClick={() => handleNavLinkClick('add-contact')}>Add users</a>
+          <NavLink className="nav-link" to="/contact-add" >Add users</NavLink>
         </li>
+        <li className="nav-item">
+          <NavLink className="nav-link" to="/contact-edit" >Edit users</NavLink>
+        </li>
+        
       </ul>
     </div>
   </div>

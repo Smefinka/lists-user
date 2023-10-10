@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 function FormAddUser({onClickAdd, id}) {
     const [formData, setFormData] = useState({
         name: '',
@@ -60,8 +61,8 @@ return(
           onChange={handleInputChange}
         />
       </div>
-      <button type="submit" className="btn btn-primary" onClick={handleAdd}>Add user/Save</button>
-      <button type="submit" className="btn btn-primary" onClick={handleReset}>Reset</button>
+      <button type="submit" className="btn btn-primary" onClick={handleAdd}><NavLink className="nav-link" to="/" >Add user/Save</NavLink></button>
+      <button type="submit" className="btn btn-primary" onClick={handleReset}><NavLink className="nav-link" to="/" >Reset</NavLink></button>
     </form>
     </div>
 
